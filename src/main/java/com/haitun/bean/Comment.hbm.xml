@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-2-3 11:57:06 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.haitun.bean.Comment" table="_comment" catalog="books">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        
+        <many-to-one name="book" class="com.haitun.bean.Book" fetch="select">
+            <column name="bookId" not-null="true" />
+        </many-to-one>
+         <!-- <property name="bookId" type="java.lang.Integer">
+            <column name="bookId" />
+        </property> -->
+        <property name="content" type="string">
+            <column name="content" length="65535" not-null="true" />
+        </property>
+        <property name="date" type="timestamp">
+            <column name="date" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

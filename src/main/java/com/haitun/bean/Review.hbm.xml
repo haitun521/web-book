@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-2-3 11:57:06 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.haitun.bean.Review" table="_review" catalog="books">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="user" class="com.haitun.bean.User" fetch="select">
+            <column name="userId" not-null="true" />
+        </many-to-one>
+        <many-to-one name="book" class="com.haitun.bean.Book" fetch="select">
+            <column name="bookId" not-null="true" />
+        </many-to-one>
+        <property name="createdTime" type="timestamp">
+            <column name="created_time" length="19" not-null="true" />
+        </property>
+        <property name="deletedTime" type="timestamp">
+            <column name="deleted_time" length="19" not-null="false" />
+        </property>
+    </class>
+</hibernate-mapping>

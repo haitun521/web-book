@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+table.gridtable {
+	font-family: verdana, arial, sans-serif; 
+	font-size: 16px;
+	color: #333333;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+}
+
+table.gridtable th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+}
+
+table.gridtable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+
+	<h4>115.28.206.225:8080/bookWeb</h4>
+
+	<table class="gridtable">
+		<tr>
+			<th>说明</th>
+			<th>URL</th>
+			<th>实例</th>
+			<th>请求方式</th>
+			<th>参数</th>
+			<th>结果码</th>
+		</tr>
+		<tr>
+			<td>用户登录接口</td>
+			<td>/user/login</td>
+			<td></td>
+			<td>post</td>
+			<td>id,name</td>
+			<td>000 成功，111 失败</td>
+		</tr>
+		<tr>
+			<td>用户信息接口</td>
+			<td>/user/{id}</td>
+			<td>/user/123456</td>
+			<td>get</td>
+			<td>id</td>
+			<td>同上</td>
+		</tr>
+		<tr>
+			<td>图书查询接口</td>
+			<td>/book/search</td>
+			<td></td>
+			<td>post</td>
+			<td>T1,T2,T3,T4,T5</td>
+			<td>同上</td>
+		</tr>
+		<tr>
+			<td>分页获取图书接口</td>
+			<td>/book/get</td>
+			<td>/book/get?currentPage=0&pageSize=2</td>
+			<td>get</td>
+			<td>currentPage,pageSize</td>
+			<td>同上</td>
+		</tr>
+		<tr>
+			<td>通过ISBN13图书查询接口</td>
+			<td>/book/isbn/{isbn}</td>
+			<td>/book/isbn/9787121273520</td>
+			<td>get</td>
+			<td>isbn</td>
+			<td>同上</td>
+		</tr>
+		<tr>
+			<td>通过书名模糊查询接口</td>
+			<td>/book/name/{name}</td>
+			<td>/book/name/计算机</td>
+			<td>get</td>
+			<td>name</td>
+			<td>同上</td>
+		</tr>
+		<tr>
+			<td>通过书id查询接口</td>
+			<td>/book/{id}</td>
+			<td>/book/100</td>
+			<td>get</td>
+			<td>id</td>
+			<td>同上</td>
+		</tr>
+		<tr>
+			<td>通过书id获取评论接口</td>
+			<td>/comment/bookid/{id}</td>
+			<td>/comment/bookid/100</td>
+			<td>get</td>
+			<td>id(书号ID)</td>
+			<td>同上</td>
+		</tr>
+		<tr>
+			<td>添加评论接口</td>
+			<td>/comment/add</td>
+			<td></td>
+			<td>post</td>
+			<td>bookid,content</td>
+			<td>同上</td>
+		</tr>
+		<tr>
+			<td>借阅历史接口</td>
+			<td>/borrows</td>
+			<td></td>
+			<td>post</td>
+			<td>sid(学号)</td>
+			<td>同上</td>
+		</tr>
+		
+	</table>
+
+</body>
+</html>

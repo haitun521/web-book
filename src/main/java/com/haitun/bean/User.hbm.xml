@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-2-3 11:57:06 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.haitun.bean.User" table="_user" catalog="books">
+        <id name="id" type="string">
+            <column name="id" length="12" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="50" not-null="true" />
+        </property>
+        <property name="sex" type="string">
+            <column name="sex" length="10" not-null="true" />
+        </property>
+        <property name="major" type="string">
+            <column name="major" length="50" />
+        </property>
+        <property name="grade" type="string">
+            <column name="grade" length="50" />
+        </property>
+        <property name="overdue" type="java.lang.Float">
+            <column name="overdue" precision="12" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>
